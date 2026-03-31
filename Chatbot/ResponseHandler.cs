@@ -18,7 +18,7 @@ namespace CybersecurityChatbot.Chatbot
             _responses = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
             {
                 // General responses
-                { "how are you", "I'm functioning well, thank you for asking! Ready to help you stay cyber-safe! 🛡️" },
+                { "how are you", "I'm functioning well, thank you for asking! Ready to help you stay safe on the internet! 🛡️" },
                 { "what's your purpose", "I'm your Cybersecurity Awareness Assistant! I'm here to educate and help you stay safe from cyber threats like phishing, malware, and social engineering attacks." },
                 { "what can i ask you about", "You can ask me about:\n   • Password safety and best practices\n   • How to identify phishing emails\n   • Recognizing suspicious links\n   • Safe browsing habits\n   • Social engineering awareness\n   • General cybersecurity tips" },
                 
@@ -51,7 +51,7 @@ namespace CybersecurityChatbot.Chatbot
             }
 
             // Default response for unrecognized queries
-            return "I'm not sure I understand that question. Could you ask me about password safety, phishing, safe browsing, social engineering, or malware? Or try asking 'what can I ask you about' for more options! 😊";
+            return "I'm not sure if I understand that question. Could you ask me about password safety, phishing, safe browsing, social engineering, or malware? Or try asking 'what can I ask you about' for more options! 😊";
         }
 
         /// <summary>
