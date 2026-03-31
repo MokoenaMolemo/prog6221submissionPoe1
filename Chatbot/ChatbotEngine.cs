@@ -6,9 +6,9 @@ using CybersecurityChatbot.UI;
 
 namespace CybersecurityChatbot.Chatbot
 {
-    /// <summary>
+    
     /// Main chatbot engine that orchestrates all components
-    /// </summary>
+    
     public class ChatbotEngine
     {
         private readonly ConsoleUI _ui;
@@ -25,9 +25,9 @@ namespace CybersecurityChatbot.Chatbot
             _audioPlayer = new AudioPlayer();
         }
 
-        /// <summary>
-        /// Starts the chatbot application
-        /// </summary>
+       
+        /// Start the chatbot application
+        
         public async Task StartAsync()
         {
             try
@@ -35,7 +35,7 @@ namespace CybersecurityChatbot.Chatbot
                 // Display initial header
                 _ui.DisplayHeader("CYBERSECURITY AWARENESS BOT");
 
-                // Play voice greeting with graceful fallback
+                
                 string audioPath = _audioPlayer.GetRecommendedAudioPath();
                 if (_audioPlayer.AudioFileExists(audioPath))
                 {
@@ -71,9 +71,9 @@ namespace CybersecurityChatbot.Chatbot
             }
         }
 
-        /// <summary>
+        
         /// Gets and validates user name
-        /// </summary>
+       
         private async Task GetUserNameAsync()
         {
             string? userName = null;
@@ -98,9 +98,9 @@ namespace CybersecurityChatbot.Chatbot
             await Task.Delay(1000);
         }
 
-        /// <summary>
+        
         /// Displays personalized welcome message
-        /// </summary>
+        
         private async Task DisplayWelcomeAsync()
         {
             _ui.DisplaySeparator();
@@ -111,9 +111,9 @@ namespace CybersecurityChatbot.Chatbot
             _ui.DisplayMessage(_responseHandler.GetHelpMessage(), "bot");
         }
 
-        /// <summary>
+        
         /// Main conversation loop
-        /// </summary>
+       
         private async Task StartConversationAsync()
         {
             bool isRunning = true;
@@ -155,9 +155,9 @@ namespace CybersecurityChatbot.Chatbot
             }
         }
 
-        /// <summary>
-        /// Ends the session with farewell message
-        /// </summary>
+        
+        /// Ends the session 
+        
         private async Task EndSessionAsync()
         {
             _ui.DisplaySeparator();
